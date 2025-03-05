@@ -1,0 +1,121 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sans-serif;
+}
+input,
+button {
+  outline: none;
+  border: none;
+}
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+}
+.header {
+  border-bottom: 1px solid #a49e9e;
+  margin-bottom: 24px;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group label {
+  position: absolute;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  text-overflow: ellipsis;
+  color: rgba(0, 0, 0, 0.6);
+  background: #fff;
+  padding: 0 5px;
+  top: -13px;
+  left: 10px;
+  z-index: 1;
+  overflow: hidden;
+}
+.input-group input {
+  width: 210px;
+  font-size: 1rem;
+  padding: 8.5px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+div:has(input:focus) label {
+  color: #1976c0;
+}
+.input-group input:focus {
+  border: 2px solid #1976c0;
+}
+.input-group #input:focus ~ .label-input {
+  color: #1976c0;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none; /* Ẩn thông báo lỗi ban đầu */
+}
+
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+.btn-load {
+  padding: 6px 16px;
+  color: #fff;
+  background: rgb(25, 118, 210);
+  border-radius: 4px;
+}
+.btn-load:hover {
+  background-color: rgb(21, 101, 192);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+}
+.btn-clear {
+  background: transparent;
+  border: 1px solid rgba(156, 39, 176, 0.5);
+  border-radius: 4px;
+  color: rgb(156, 39, 176);
+  padding: 5px 15px;
+}
+.btn-clear:hover {
+  background-color: rgba(156, 39, 176, 0.04);
+  border: 1px solid rgb(156, 39, 176);
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.image {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: lightgray;
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
